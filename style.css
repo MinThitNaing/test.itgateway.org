@@ -175,10 +175,6 @@ header {
     border-radius: var(--border-radius-m);
 }
 
-.search-button.i {
-    font-size: 32px;
-}
-
 .nav-top-menu {
     display: flex;
     gap: 12px;
@@ -199,6 +195,10 @@ header {
 }
 
 /* ----- Hero Section ----- */
+.hero-section-2 {
+    padding: auto;
+    margin: auto;
+}
 
 
 
