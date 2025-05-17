@@ -1,6 +1,7 @@
 const menuButton = document.querySelectorAll(".menu-button");
 const ScreenOverlay = document.querySelector(".screen-overlay");
 const themeButton = document.querySelector(".theme-button i");
+const loginButton = document.querySelector(".login-button");
 
 // Initialize dark mode based on local storage
 if (localStorage.getItem("darkMode") === "enabled") {
