@@ -104,9 +104,20 @@ a:hover {
     transition: 0.3s ease;
 }
 
+.nav-container {
+    margin: 0 4rem;
+}
+
 .container {
     margin: 0 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
+}
+
+.nav-container .nav-button {
+    border: none;
+    cursor: pointer;
+    color: var(--white-color);
+    background: none;
 }
 
 .container .nav-button {
@@ -117,6 +128,12 @@ a:hover {
 }
 
 .container .nav-button i {
+    display: flex;
+    font-size: var(--font-size-m);
+    align-items: center;
+}
+
+.nav-container .nav-button i {
     display: flex;
     font-size: var(--font-size-m);
     align-items: center;
@@ -161,7 +178,7 @@ a:hover {
     padding: 0.6rem 1rem;
     border-radius: var(--border-radius-m);
     background: var(--background-trasparent);
-    border: 1px solid var(--border-color);
+    border: 0.5px solid var(--border-color);
     box-shadow: var(--box-shadow-btn);
 }
 
@@ -195,8 +212,12 @@ a:hover {
 /* ----- Nav Bar Section ----- */
 /* --------------------------- */
 .header {
+    position: fixed;
+    width: 100%;
     padding-top: 5px;
     background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--box-shadow-btn);
 }
 
 .nav-top {
@@ -272,6 +293,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
+    scroll-behavior: smooth;
 }
 
 .nav-bottom .nav-bottom-menu {
@@ -306,18 +328,19 @@ a:hover {
 /* ------- Hero Section ------ */
 /* --------------------------- */
 .hero-section {
-    height: 600px;
+    height: 700px;
     overflow: hidden;
+    margin-bottom: 5rem;
 }
 
 .hero-wrapper {
+    padding: 10rem 0;
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
 .hero-section .hero-content {
-    padding: 10px;
     width: 60%;
 }
 
@@ -335,17 +358,14 @@ a:hover {
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 94vh;
     background-image: url('./assets/image/hero-background.gif');
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: cover;
     opacity: 0.5;
     overflow: hidden;
     z-index: -1;
-}
-
-.hero-content {
-    padding: 0 1rem;
 }
 
 .hero-title {
@@ -378,7 +398,7 @@ a:hover {
 /* ----- Service Category ---- */
 /* --------------------------- */
 .service-category {
-    margin-top: -3.5rem;
+    margin-top: 8rem;
     margin-bottom: 6rem;
 }
 
@@ -389,7 +409,7 @@ a:hover {
 
 .service-category-card {
     align-items: center;
-    border: 1px solid var(--border-color);
+    border: 0.5px solid var(--border-color);
     border-radius: var(--border-radius-m);
     width: calc(25% - 20px);
     background: var(--background-trasparent);
@@ -466,7 +486,7 @@ a:hover {
     gap: 2rem;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     overflow: hidden;
 }
 
@@ -484,3 +504,55 @@ a:hover {
     transition: 0.3s all ease;
 }
 
+/* --------------------------- */
+/* ------- Achievements ------ */
+/* --------------------------- */
+.achievements {
+    margin: 3erm 0;
+}
+
+.achievement-wrapper {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.achievement-card {
+    width: calc(32% - 1rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+    border: 0.5px solid var(--border-color);
+    border-radius: var(--border-radius-m);
+    box-shadow: var(--box-shadow-btn);
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.achievement-card:hover {
+    transform: scale(1.05);
+}
+
+.achievement-number {
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.achievement-text {
+    font-size: var(--font-size-m);
+    color: var(--white-color);
+    opacity: 0.6;
+}
+
+.achievement-icon i {
+    font-size: var(--font-size-xxxl);
+    padding-right: 1rem;
+    color: var(--white-color);
+    opacity: 0.5;
+}
